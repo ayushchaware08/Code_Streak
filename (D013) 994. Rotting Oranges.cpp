@@ -1,4 +1,3 @@
-//  can be Optimized by Dynamic Programming
 // Approach BFS traversal
 // TC = O(m*n) // grid m*n
 // SC = O(m*n)
