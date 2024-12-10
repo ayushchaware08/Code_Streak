@@ -10,9 +10,9 @@ public:
         // left ptr (buy) must min and further this right ptr (sell) must be max ele
         while (sell < prices.size()) {
             curr_profit = prices[sell] - prices[buy];
-            if (prices[buy] < prices[sell]) {
+            if (prices[buy] < prices[sell]) { // in profit
                 max_profit = max(max_profit, curr_profit);
-            } else {
+            } else { // in loss
                 buy = sell;
             }
             sell++;
