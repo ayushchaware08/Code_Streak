@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+// not done
+
 pair<int, int> getMAx(vector<int> arr, int s, int e)
 {
     int maxi = 0;
