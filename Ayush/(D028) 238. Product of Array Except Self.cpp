@@ -1,4 +1,4 @@
-// Better approach
+// Better approach AC
 // TC: o(N)
 // SC: O(1)
 class Solution {
