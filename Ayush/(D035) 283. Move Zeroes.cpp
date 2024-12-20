@@ -1,5 +1,6 @@
 // TC: O(n)
 // SC: O(1)
+// r look for non zero ele and put at l
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
