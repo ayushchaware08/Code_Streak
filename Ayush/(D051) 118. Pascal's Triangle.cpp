@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 
 // Q1-> Print the ele at Perticular r and c 
 // extreame Brute Force 
@@ -22,13 +24,15 @@ int nCr(int n,  int r){
         for(int col = 1; col<row; col++){
             ans = ans*(row-col);
             ans = ans/col;
+            cout<<ans<<" ";
             ansRow.push_back(ans);
         }
+        cout<<endl;
         return ansRow;
     }
 
 // Q3 -> Print Entire Pascal triangle
-// prv: o(n*n*r) using nrc 
+// prv: o(n*n*r) using nCr
 // TC: O(n^2) using generateRow
 // SC: O(1)
     vector<vector<int>> generate(int numRows) {
@@ -46,3 +50,10 @@ int nCr(int n,  int r){
         } 
         return ans;
     }
+
+
+int main(){
+    int n =6;
+    generate(n);
+
+}
