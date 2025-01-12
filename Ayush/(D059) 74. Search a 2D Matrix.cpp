@@ -1,3 +1,6 @@
+// imaginary flattan 2D to 1D then BS - optimal
+// TC: O(log(n*m))
+// SC: O(1)
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
@@ -17,3 +20,10 @@ public:
         }
     
 };
+
+// better one - select perticular row then BS
+// TC: O(n+logm)
+// SC: O(1)
+
+// Brute force 
+// o(n*m)
