@@ -20,7 +20,7 @@ public:
 };
 
 // Navie Approach Using sorting
-// TC: O(logn + n)
+// TC: O(nlogn + n)
 // SC: O(1)
 class Solution {
 public:
