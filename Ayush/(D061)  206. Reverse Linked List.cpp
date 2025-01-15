@@ -1,7 +1,23 @@
 // Optimal - Using Recurssion
+// TC: O(n)
+// SC: O(n) - recursive stack space
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        // base case
+        if(head==NULL || head->next == nullptr){
+            return head;
+        }
+        // function
+        ListNode* newhead = reverseList(head->next); // head of reversed LL
+        ListNode* front = head->next;
+        front ->next = head;
+        head->next = nullptr;
+        return newhead;
+    }
+};
 
-
-// Better way
+// Better way - reverse links
 // TC: O(n)
 // SC: O(1)
 class Solution {
