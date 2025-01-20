@@ -1,3 +1,4 @@
+// only optimal one
 // O(n) O(1)
 class Solution {
 public:
