@@ -32,4 +32,4 @@ public:
         }
         return 0; // equal
     }
-};
+}; 
