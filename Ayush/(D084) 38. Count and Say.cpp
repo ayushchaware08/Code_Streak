@@ -1,3 +1,5 @@
+// can be optimized
+
 class Solution {
 public:
     string countAndSay(int n) {
