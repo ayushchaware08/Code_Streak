@@ -3,6 +3,56 @@
 // Optimal (XOR) - avoid in interview
 // TC: O(n)
 // SC: O(1)
+#include <bits/stdc++.h>
+pair<int,int> missingAndRepeating(vector<int> &arr, int n)
+{
+	int xrr = 0;
+	// s1: xor ele
+	for(int i =0; i<n; i++){
+		xrr = xrr ^ arr[i];		
+		xrr = xrr ^ (i+1);
+
+	} 
+	// S2: diffrent bit index
+	// int bitno=0; 
+	// while(1){
+	// 	if((xrr & (1<<bitno)) !=0) break;
+	// 	bitno++;
+	// }
+	int bitno = (xrr & ~(xrr-1));
+	
+	// s3: seperate grouping
+	int zero=0;
+	int one =0;
+	for(int i =0; i<n; i++){
+		//part of 1 group:
+        if ((arr[i] & bitno) != 0) {
+            one = one^arr[i];
+        }
+        //part of 0 group:
+        else {
+            zero = zero^arr[i];
+        }
+	}
+
+	for(int i=1; i<=n; i++){
+		if((i & (bitno)) !=0){
+			// part of 1th club
+			one = one^i;
+		}
+		else{
+			// part of 0th club
+			zero = zero ^ i;
+		}
+	}
+	int cnt = 0;
+	for(int i = 0; i<n; i++){
+		if(arr[i]==zero) cnt++;
+	}
+	if(cnt==2) return {one, zero};
+	return {zero, one};
+}
+
 
 // Optimal (mathamatics) - Recomended in Interview
 // TC: O(n)
